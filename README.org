@@ -3,6 +3,7 @@
 * Usage
 ** Tool
 : pgupload /path/to/image.jpg
+The short URL will be returned & copied to your clipboard
 ** Gem
 : require 'picgarage'
 : picgarage = PicGarage::PicGarage.new
