@@ -2,6 +2,13 @@
 
 require 'picgarage'
 
+unless ARGV[0]
+
+  puts "Usage: pgupload /path/to/image.jpg"
+  exit 0
+
+end
+
 image = ARGV[0]
 
 picgarage = PicGarage::PicGarage.new

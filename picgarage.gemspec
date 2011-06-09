@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Sean Porter"]
   s.email       = ["portertech@gmail.com"]
   s.homepage    = "https://github.com/portertech/picgarage"
-  s.summary     = %q{A rubygem for uploading images to PicGarage.net}
-  s.description = %q{A rubygem for uploading images to PicGarage.net}
+  s.summary     = %q{A tool & ruby gem for uploading images to PicGarage.net}
+  s.description = %q{A tool & ruby gem for uploading images to PicGarage.net}
 
   s.rubyforge_project = "picgarage"
 
