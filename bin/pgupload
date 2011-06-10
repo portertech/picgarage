@@ -11,18 +11,26 @@ end
 
 image = ARGV[0]
 
-picgarage = PicGarage::PicGarage.new
+begin
 
-short_url = picgarage.upload_image(image)
+  picgarage = PicGarage::PicGarage.new
 
-if RUBY_PLATFORM.downcase.include?("darwin")
+  short_url = picgarage.upload_image(image)
 
-  IO.popen('pbcopy', 'r+') do |clipboard|
+  if RUBY_PLATFORM.downcase.include?("darwin")
 
-    clipboard.puts short_url
+    IO.popen('pbcopy', 'r+') do |clipboard|
+
+      clipboard.puts short_url
+
+    end
 
   end
 
-end
+  puts short_url
 
-puts short_url
+rescue => error
+
+  puts error
+
+end

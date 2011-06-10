@@ -28,19 +28,19 @@ module PicGarage
 
           else
 
-            "Bad response from server, please try again."
+            raise "Bad response from server, please try again."
 
           end
 
         else
 
-          "Given image type is not accepted."
+          raise "Given image type is not accepted."
 
         end
 
       else
 
-        "Given image does not exist."
+        raise "Given image does not exist."
 
       end
 
