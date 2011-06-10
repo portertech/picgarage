@@ -6,6 +6,10 @@
 The short URL will be returned & copied to your clipboard
 ** Gem
 : require 'picgarage'
-: picgarage = PicGarage::PicGarage.new
-: short_url = picgarage.upload_image('/path/to/image.jpg')
-: puts short_url
+: begin
+:   picgarage = PicGarage::PicGarage.new
+:   short_url = picgarage.upload_image('/path/to/image.jpg')
+:   puts short_url
+: rescue => error
+:   puts error
+: end
