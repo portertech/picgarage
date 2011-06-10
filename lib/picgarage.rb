@@ -24,7 +24,7 @@ module PicGarage
           if post.response_code == 201
 
             response = JSON.parse(post.body_str)
-            response["image"]["large_url"]
+            response["image"]["original_url"]
 
           else
 
