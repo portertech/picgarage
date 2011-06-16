@@ -15,19 +15,19 @@ begin
 
   picgarage = PicGarage::PicGarage.new
 
-  short_url = picgarage.upload_image(image)
+  image_url = picgarage.upload_image(image)
 
   if RUBY_PLATFORM.downcase.include?("darwin")
 
     IO.popen('pbcopy', 'r+') do |clipboard|
 
-      clipboard.puts short_url
+      clipboard.puts image_url
 
     end
 
   end
 
-  puts short_url
+  puts image_url
 
 rescue => error
 

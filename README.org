@@ -1,15 +1,27 @@
+* Requirements
+
+- Ruby (MRI)
+- RubyGems
+
 * Install
+
 : gem install picgarage
+
 * Usage
+
 ** Tool
+
 : pgupload /path/to/image.jpg
-The short URL will be returned & copied to your clipboard
-** Gem
+
+The image URL will be returned & copied to your clipboard
+
+** Library
+
 : require 'picgarage'
 : begin
 :   picgarage = PicGarage::PicGarage.new
-:   short_url = picgarage.upload_image('/path/to/image.jpg')
-:   puts short_url
+:   image_url = picgarage.upload_image('/path/to/image.jpg')
+:   puts image_url
 : rescue => error
 :   puts error
 : end
