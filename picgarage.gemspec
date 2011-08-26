@@ -1,10 +1,6 @@
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "picgarage/version"
-
 Gem::Specification.new do |s|
   s.name        = "picgarage"
-  s.version     = PicGarage::VERSION
+  s.version     = "0.0.6"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Sean Porter"]
   s.email       = ["portertech@gmail.com"]
