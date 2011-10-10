@@ -19,7 +19,9 @@ module PicGarage
 
           post = Curl::Easy.new("http://www.picgarage.net/uploader.json")
           post.multipart_form_post = true
-          post.http_post(Curl::PostField.file("image", image))
+          body = Curl::PostField.file("image", image)
+          body.content_type = mime_type
+          post.http_post(body)
 
           if post.response_code == 201
 
